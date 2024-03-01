@@ -4,8 +4,8 @@ function Header(){
     
 return(
         <div className="main">
-            <h2>This is the Header page</h2>
-            
+            <h2>Rachel Valenzuela</h2>
+            {/* import nav here */}
         </div>
     )
 }
