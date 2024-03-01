@@ -3,7 +3,6 @@ import styles from "./Footer.module.css"; // Make sure to create this CSS module
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"; // Corrected icons import
 
-// Removed the duplicate and incorrect Footer.css import
 
 export default function Footer() {
     const socialLinks = [
