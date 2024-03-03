@@ -19,7 +19,7 @@ export default function Footer() {
                         key={link.name}
                         href={link.url}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer" //security for new page opening. prevents url from redirecting to malicious url
                         aria-label={`Follow me on ${link.name}`}
                         className={styles.socialLink}
                     >
