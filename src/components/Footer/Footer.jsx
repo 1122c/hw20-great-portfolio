@@ -1,5 +1,5 @@
 // import React from "react";
-import styles from "./Footer.module.css"; // Make sure to create this CSS module file
+import "./Footer.css"; // Make sure to create this CSS module file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"; // Corrected icons import
 
@@ -12,8 +12,8 @@ export default function Footer() {
     ];
 
     return (
-        <footer className={styles.footer}>
-            <div className={styles.socialLinks}>
+        <footer className="footer">
+            <div className="socialLinks">
                 {socialLinks.map((link) => (
                     <a
                         key={link.name}
@@ -21,9 +21,9 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer" //security for new page opening. prevents url from redirecting to malicious url
                         aria-label={`Follow me on ${link.name}`}
-                        className={styles.socialLink}
+                        className="socialLink"
                     >
-                        <FontAwesomeIcon icon={link.icon} className={styles.icon} />
+                        <FontAwesomeIcon icon={link.icon} className="icon" />
                     </a>
                 ))}
             </div>
