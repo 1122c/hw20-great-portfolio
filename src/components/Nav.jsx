@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Nav(){
     
@@ -7,10 +8,11 @@ function Nav(){
         <div className="main">
             <h2>This is the Nav page</h2>
             <ul>
-                <li>About</li>
-                 <li>Portfolio</li>
-                  <li>Contact</li>
-                   <li>Resume</li>
+               <Link to="/"><li>About</li></Link> 
+               <Link to="/portfolio"><li>Portfolio</li></Link> 
+               <Link to="/contact"><li>Contact</li></Link> 
+               <Link to="/resume"><li>Resume</li></Link> 
+                 
             </ul>
         </div>
     )
