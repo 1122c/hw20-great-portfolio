@@ -39,7 +39,7 @@ function Contact() {
     setMessage('');
     setErrorMessage('');
 
-    // Here, you can add further actions, such as sending the form data to a server
+    // add further actions, such as sending the form data to a server
     // For demonstration purposes, an alert to confirm the form submission
     alert('Form submitted successfully!');
   };
