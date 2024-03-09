@@ -2,35 +2,39 @@ import { useState } from 'react';
 import './style.css';
 import { validateEmail } from '../../utils/helpers';
 
-function Contact() {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+function Contact() { 
+  const [email, setEmail] = useState(''); //hook to manage email field's state
+  const [name, setName] = useState(''); //manage name field's state
+  const [message, setMessage] = useState(''); // manage message field's state
+  const [errorMessage, setErrorMessage] = useState(''); //manage error message's state
 
+  //function managing form's input field
   const handleInputChange = (e) => {
+    //destructuring to get name and value from event target (input fields)
     const { name, value } = e.target;
+    //switch statement handle different input fields based on name
     switch (name) {
       case 'email':
-        setEmail(value);
+        setEmail(value); //updates email state with new value
         break;
       case 'name': // This case handles changes to the name input
-        setName(value);
+        setName(value); //updates name state
         break;
       case 'message':
         setMessage(value);
         break;
       default:
-        break;
+        break; //does nothing?
     }
   };
 
+  //function to handle form submission event
   const handleFormSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //prevents page reload
 
-    if (!validateEmail(email) || !name) {
+    if (!validateEmail(email) || !name) { //validates email checks if name is not empty
       setErrorMessage('Email or name is invalid');
-      return;
+      return; //exits function
     }
 
     // Clear the form fields and reset the error message after successful validation
@@ -48,14 +52,14 @@ function Contact() {
     <div>
       <h2>Contact Us</h2>
       {errorMessage && <p className="error">{errorMessage}</p>}
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit}> 
         <label>
           Name:
           <input
             type="text"
-            name="name"
-            value={name}
-            onChange={handleInputChange}
+            name="name" //name atrribute used in switch statement
+            value={name} //binds input value to name state
+            onChange={handleInputChange} //assigns change event handler
           />
         </label>
         <label>
@@ -71,7 +75,7 @@ function Contact() {
           Message:
           <textarea
             name="message"
-            value={message}
+            value={message} //binds text area content to message state
             onChange={handleInputChange}
           />
         </label>
