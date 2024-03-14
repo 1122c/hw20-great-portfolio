@@ -5,9 +5,8 @@ function Nav(){
 
 
     return(
-        <div className="main">
-            <h2>This is the Nav page</h2>
-            <ul>
+        <div className="nav-main">
+            <ul className="nav-links">
                <Link to="/"><li>About</li></Link> 
                <Link to="/portfolio"><li>Portfolio</li></Link> 
                <Link to="/contact"><li>Contact</li></Link> 

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import './style.css';
-import { validateEmail } from '../../utils/helpers';
+// import { validateEmail } from '../../utils/helpers';
 
 function Contact() { 
   const [email, setEmail] = useState(''); //hook to manage email field's state
@@ -52,34 +51,37 @@ function Contact() {
     <div>
       <h2>Contact Us</h2>
       {errorMessage && <p className="error">{errorMessage}</p>}
-      <form onSubmit={handleFormSubmit}> 
+      <form className="contactForm" onSubmit={handleFormSubmit}> 
         <label>
           Name:
+           </label>
           <input
             type="text"
             name="name" //name atrribute used in switch statement
             value={name} //binds input value to name state
             onChange={handleInputChange} //assigns change event handler
           />
-        </label>
+       
         <label>
           Email:
+          </label>
           <input
             type="email"
             name="email"
             value={email}
             onChange={handleInputChange}
           />
-        </label>
+        
         <label>
           Message:
+          </label>
           <textarea
             name="message"
             value={message} //binds text area content to message state
             onChange={handleInputChange}
           />
-        </label>
-        <button type="submit">Submit</button>
+        
+        <button className="contactButton" type="submit">Submit</button>
       </form>
     </div>
   );
