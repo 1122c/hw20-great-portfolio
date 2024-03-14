@@ -9,11 +9,12 @@ function App() {
 
 
   return (
-    <>
+    <div className='main-background'>
     <Header/>
     < Outlet />
     <Footer/>
-    </>
+  
+    </div>
   )
 }
 

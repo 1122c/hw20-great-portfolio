@@ -1,9 +1,19 @@
 import resume from "../assets/resume.pdf"
+import { Parallax, Background } from 'react-parallax';
 
 function Resume(){
    
 
     return(
+         <Parallax 
+         blur={{ min: -15, max: 15 }}
+        bgImage="https://live.staticflickr.com/65535/53538195622_d3678b0e83_z.jpg"
+        bgImageAlt="the dog"
+        strength={0}
+         >
+
+
+
         <div className="main">
             <h2>Resume page</h2>
             {/* list front end and backend proficiences */}
@@ -26,6 +36,11 @@ function Resume(){
                 <li>Python</li>
             </ul>
         </div>
+
+         <div style={{ height: '195px', width:"100%" }} />
+    </Parallax>
+
+
     )
 }
 
